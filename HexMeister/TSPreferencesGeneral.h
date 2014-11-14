@@ -1,5 +1,5 @@
 //
-//  SQUDocument.h
+//  TSPreferencesGeneral.h
 //  HexMeister
 //
 //  Created by Tristan Seifert on 11/13/14.
@@ -8,8 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface SQUDocument : NSDocument
-
+@interface TSPreferencesGeneral : NSViewController
 
 @end
-

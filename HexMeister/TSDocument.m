@@ -1,18 +1,18 @@
 //
-//  SQUDocument.m
+//  TSDocument.m
 //  HexMeister
 //
 //  Created by Tristan Seifert on 11/13/14.
 //  Copyright (c) 2014 Tristan Seifert. All rights reserved.
 //
 
-#import "SQUDocument.h"
+#import "TSDocument.h"
 
-@interface SQUDocument ()
+@interface TSDocument ()
 
 @end
 
-@implementation SQUDocument
+@implementation TSDocument
 
 - (instancetype) init {
     self = [super init];
@@ -34,7 +34,7 @@
 - (NSString *) windowNibName {
 	// Override returning the nib file name of the document
 	// If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
-	return @"SQUDocument";
+	return @"TSDocument";
 }
 
 - (NSData *) dataOfType:(NSString *) typeName error:(NSError **) outError {

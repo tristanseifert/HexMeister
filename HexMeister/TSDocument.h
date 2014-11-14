@@ -1,5 +1,5 @@
 //
-//  SQUAppDelegate.h
+//  TSDocument.h
 //  HexMeister
 //
 //  Created by Tristan Seifert on 11/13/14.
@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface SQUAppDelegate : NSObject <NSApplicationDelegate>
+@interface TSDocument : NSDocument
 
 
 @end

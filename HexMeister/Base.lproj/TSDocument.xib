@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="SQUDocument">
+        <customObject id="-2" userLabel="File's Owner" customClass="TSDocument">
             <connections>
                 <outlet property="window" destination="xOd-HO-29H" id="JIz-fz-R2o"/>
             </connections>
