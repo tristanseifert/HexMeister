@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Tristan Seifert. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "SQUAppDelegate.h"
 
-@interface AppDelegate ()
+@interface SQUAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation SQUAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Insert code here to initialize your application

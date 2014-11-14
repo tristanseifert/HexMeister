@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Tristan Seifert. All rights reserved.
 //
 
-#import "Document.h"
+#import "SQUDocument.h"
 
-@interface Document ()
+@interface SQUDocument ()
 
 @end
 
-@implementation Document
+@implementation SQUDocument
 
 - (instancetype)init {
     self = [super init];
@@ -34,7 +34,7 @@
 - (NSString *)windowNibName {
 	// Override returning the nib file name of the document
 	// If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
-	return @"Document";
+	return @"SQUDocument";
 }
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError {
