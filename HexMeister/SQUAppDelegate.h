@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  SQUAppDelegate.h
 //  HexMeister
 //
 //  Created by Tristan Seifert on 11/13/14.

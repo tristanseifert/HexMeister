@@ -1,0 +1,3 @@
+[submodule "TSAppKit"]
+	path = TSAppKit
+	url = git@github.com:tristanseifert/TSAppKit.git

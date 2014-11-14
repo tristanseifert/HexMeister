@@ -1,0 +1,20 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+
+#import <CocoaLumberjack/CocoaLumberjack.h>
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#endif
+
+// Define a C version of the "DDAssert" macro
+#define DDCAssert(condition, frmt, ...)                                           \
+if (!(condition)) {                                                           \
+NSString *description = [NSString stringWithFormat:frmt, ## __VA_ARGS__]; \
+DDLogError(@"%@", description);                                           \
+NSCAssert(NO, description);                                               \
+}

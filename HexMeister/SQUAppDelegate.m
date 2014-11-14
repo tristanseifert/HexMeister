@@ -1,5 +1,5 @@
 //
-//  AppDelegate.m
+//  SQUAppDelegate.m
 //  HexMeister
 //
 //  Created by Tristan Seifert on 11/13/14.
@@ -14,11 +14,11 @@
 
 @implementation SQUAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+- (void) applicationDidFinishLaunching:(NSNotification *) aNotification {
 	// Insert code here to initialize your application
 }
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
+- (void) applicationWillTerminate:(NSNotification *) aNotification {
 	// Insert code here to tear down your application
 }
 

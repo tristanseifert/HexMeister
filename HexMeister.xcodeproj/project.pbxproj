@@ -7,24 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BD0B4195E05C956B764B2C5 /* libPods-HexMeister.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F77F51F6E02915A834FD1735 /* libPods-HexMeister.a */; };
 		6A5570F91A15C7ED00C46014 /* SQUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5570F81A15C7ED00C46014 /* SQUAppDelegate.m */; };
 		6A5570FB1A15C7ED00C46014 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5570FA1A15C7ED00C46014 /* main.m */; };
 		6A5570FE1A15C7ED00C46014 /* SQUDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5570FD1A15C7ED00C46014 /* SQUDocument.m */; };
 		6A5571011A15C7ED00C46014 /* SQUDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A5570FF1A15C7ED00C46014 /* SQUDocument.xib */; };
 		6A5571031A15C7ED00C46014 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A5571021A15C7ED00C46014 /* Images.xcassets */; };
 		6A5571061A15C7ED00C46014 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A5571041A15C7ED00C46014 /* MainMenu.xib */; };
-		6A5571121A15C7ED00C46014 /* HexMeisterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5571111A15C7ED00C46014 /* HexMeisterTests.m */; };
+		6A5571261A15C8EF00C46014 /* TSAppKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5571201A15C89F00C46014 /* TSAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6A55710C1A15C7ED00C46014 /* PBXContainerItemProxy */ = {
+		6A55711F1A15C89F00C46014 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6A5570EA1A15C7ED00C46014 /* Project object */;
+			containerPortal = 6A55711B1A15C89F00C46014 /* TSAppKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6ABE16131A11A7AE00165B3A;
+			remoteInfo = TSAppKit;
+		};
+		6A5571231A15C8B600C46014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A55711B1A15C89F00C46014 /* TSAppKit.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 6A5570F11A15C7ED00C46014;
-			remoteInfo = HexMeister;
+			remoteGlobalIDString = 6ABE16121A11A7AE00165B3A;
+			remoteInfo = TSAppKit;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6A5571251A15C8B800C46014 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6A5571261A15C8EF00C46014 /* TSAppKit.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6A5570F21A15C7ED00C46014 /* HexMeister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexMeister.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,14 +54,16 @@
 		6A5570F71A15C7ED00C46014 /* SQUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQUAppDelegate.h; sourceTree = "<group>"; };
 		6A5570F81A15C7ED00C46014 /* SQUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQUAppDelegate.m; sourceTree = "<group>"; };
 		6A5570FA1A15C7ED00C46014 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6A5570FC1A15C7ED00C46014 /* SQUDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQUDocument.h; sourceTree = "<group>"; };
-		6A5570FD1A15C7ED00C46014 /* SQUDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQUDocument.m; sourceTree = "<group>"; };
+		6A5570FC1A15C7ED00C46014 /* SQUDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SQUDocument.h; path = HexMeister/SQUDocument.h; sourceTree = "<group>"; };
+		6A5570FD1A15C7ED00C46014 /* SQUDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SQUDocument.m; path = HexMeister/SQUDocument.m; sourceTree = "<group>"; };
 		6A5571001A15C7ED00C46014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SQUDocument.xib; sourceTree = "<group>"; };
 		6A5571021A15C7ED00C46014 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6A5571051A15C7ED00C46014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		6A55710B1A15C7ED00C46014 /* HexMeisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexMeisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A5571101A15C7ED00C46014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A5571111A15C7ED00C46014 /* HexMeisterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HexMeisterTests.m; sourceTree = "<group>"; };
+		6A55711B1A15C89F00C46014 /* TSAppKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TSAppKit.xcodeproj; path = TSAppKit/TSAppKit.xcodeproj; sourceTree = "<group>"; };
+		6A5571291A15C9B900C46014 /* HexMeister-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HexMeister-Prefix.pch"; sourceTree = "<group>"; };
+		7CE49B4213CEC972DF88700E /* Pods-HexMeister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexMeister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HexMeister/Pods-HexMeister.debug.xcconfig"; sourceTree = "<group>"; };
+		C94337398F727D027D9EA08F /* Pods-HexMeister.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexMeister.release.xcconfig"; path = "Pods/Target Support Files/Pods-HexMeister/Pods-HexMeister.release.xcconfig"; sourceTree = "<group>"; };
+		F77F51F6E02915A834FD1735 /* libPods-HexMeister.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HexMeister.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,25 +71,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6A5571081A15C7ED00C46014 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				5BD0B4195E05C956B764B2C5 /* libPods-HexMeister.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14E48A187B11312FE6B710F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F77F51F6E02915A834FD1735 /* libPods-HexMeister.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15E71813783091D5E03168C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CE49B4213CEC972DF88700E /* Pods-HexMeister.debug.xcconfig */,
+				C94337398F727D027D9EA08F /* Pods-HexMeister.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6A5570E91A15C7ED00C46014 = {
 			isa = PBXGroup;
 			children = (
-				6A5570F41A15C7ED00C46014 /* HexMeister */,
-				6A55710E1A15C7ED00C46014 /* HexMeisterTests */,
+				6A55711B1A15C89F00C46014 /* TSAppKit.xcodeproj */,
+				6A5571271A15C93300C46014 /* Document */,
+				6A55712B1A15CA3D00C46014 /* Preferences */,
+				6A5570F41A15C7ED00C46014 /* App Delegate */,
+				6A5571281A15C97F00C46014 /* Resources */,
 				6A5570F31A15C7ED00C46014 /* Products */,
+				15E71813783091D5E03168C6 /* Pods */,
+				14E48A187B11312FE6B710F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,50 +113,65 @@
 			isa = PBXGroup;
 			children = (
 				6A5570F21A15C7ED00C46014 /* HexMeister.app */,
-				6A55710B1A15C7ED00C46014 /* HexMeisterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6A5570F41A15C7ED00C46014 /* HexMeister */ = {
+		6A5570F41A15C7ED00C46014 /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				6A5570F71A15C7ED00C46014 /* SQUAppDelegate.h */,
 				6A5570F81A15C7ED00C46014 /* SQUAppDelegate.m */,
-				6A5570FC1A15C7ED00C46014 /* SQUDocument.h */,
-				6A5570FD1A15C7ED00C46014 /* SQUDocument.m */,
-				6A5570FF1A15C7ED00C46014 /* SQUDocument.xib */,
-				6A5571021A15C7ED00C46014 /* Images.xcassets */,
 				6A5571041A15C7ED00C46014 /* MainMenu.xib */,
 				6A5570F51A15C7ED00C46014 /* Supporting Files */,
 			);
+			name = "App Delegate";
 			path = HexMeister;
 			sourceTree = "<group>";
 		};
 		6A5570F51A15C7ED00C46014 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6A5570F61A15C7ED00C46014 /* Info.plist */,
 				6A5570FA1A15C7ED00C46014 /* main.m */,
+				6A5571291A15C9B900C46014 /* HexMeister-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6A55710E1A15C7ED00C46014 /* HexMeisterTests */ = {
+		6A55711C1A15C89F00C46014 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6A5571111A15C7ED00C46014 /* HexMeisterTests.m */,
-				6A55710F1A15C7ED00C46014 /* Supporting Files */,
+				6A5571201A15C89F00C46014 /* TSAppKit.framework */,
 			);
-			path = HexMeisterTests;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		6A55710F1A15C7ED00C46014 /* Supporting Files */ = {
+		6A5571271A15C93300C46014 /* Document */ = {
 			isa = PBXGroup;
 			children = (
-				6A5571101A15C7ED00C46014 /* Info.plist */,
+				6A5570FC1A15C7ED00C46014 /* SQUDocument.h */,
+				6A5570FD1A15C7ED00C46014 /* SQUDocument.m */,
+				6A5570FF1A15C7ED00C46014 /* SQUDocument.xib */,
 			);
-			name = "Supporting Files";
+			name = Document;
+			sourceTree = "<group>";
+		};
+		6A5571281A15C97F00C46014 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6A5570F61A15C7ED00C46014 /* Info.plist */,
+				6A5571021A15C7ED00C46014 /* Images.xcassets */,
+			);
+			name = Resources;
+			path = HexMeister;
+			sourceTree = "<group>";
+		};
+		6A55712B1A15CA3D00C46014 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Preferences;
+			path = HexMeister;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,36 +181,22 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A5571151A15C7ED00C46014 /* Build configuration list for PBXNativeTarget "HexMeister" */;
 			buildPhases = (
+				A3F09D5A23A494D09EB23681 /* Check Pods Manifest.lock */,
 				6A5570EE1A15C7ED00C46014 /* Sources */,
 				6A5570EF1A15C7ED00C46014 /* Frameworks */,
+				6A5571251A15C8B800C46014 /* Copy Frameworks */,
 				6A5570F01A15C7ED00C46014 /* Resources */,
+				F9E7F4FB058705225108A8FE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6A5571241A15C8B600C46014 /* PBXTargetDependency */,
 			);
 			name = HexMeister;
 			productName = HexMeister;
 			productReference = 6A5570F21A15C7ED00C46014 /* HexMeister.app */;
 			productType = "com.apple.product-type.application";
-		};
-		6A55710A1A15C7ED00C46014 /* HexMeisterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6A5571181A15C7ED00C46014 /* Build configuration list for PBXNativeTarget "HexMeisterTests" */;
-			buildPhases = (
-				6A5571071A15C7ED00C46014 /* Sources */,
-				6A5571081A15C7ED00C46014 /* Frameworks */,
-				6A5571091A15C7ED00C46014 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6A55710D1A15C7ED00C46014 /* PBXTargetDependency */,
-			);
-			name = HexMeisterTests;
-			productName = HexMeisterTests;
-			productReference = 6A55710B1A15C7ED00C46014 /* HexMeisterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -168,10 +209,6 @@
 				TargetAttributes = {
 					6A5570F11A15C7ED00C46014 = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					6A55710A1A15C7ED00C46014 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 6A5570F11A15C7ED00C46014;
 					};
 				};
 			};
@@ -186,13 +223,28 @@
 			mainGroup = 6A5570E91A15C7ED00C46014;
 			productRefGroup = 6A5570F31A15C7ED00C46014 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6A55711C1A15C89F00C46014 /* Products */;
+					ProjectRef = 6A55711B1A15C89F00C46014 /* TSAppKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6A5570F11A15C7ED00C46014 /* HexMeister */,
-				6A55710A1A15C7ED00C46014 /* HexMeisterTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6A5571201A15C89F00C46014 /* TSAppKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TSAppKit.framework;
+			remoteRef = 6A55711F1A15C89F00C46014 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6A5570F01A15C7ED00C46014 /* Resources */ = {
@@ -205,14 +257,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A5571091A15C7ED00C46014 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3F09D5A23A494D09EB23681 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		F9E7F4FB058705225108A8FE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HexMeister/Pods-HexMeister-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A5570EE1A15C7ED00C46014 /* Sources */ = {
@@ -225,21 +303,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A5571071A15C7ED00C46014 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6A5571121A15C7ED00C46014 /* HexMeisterTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6A55710D1A15C7ED00C46014 /* PBXTargetDependency */ = {
+		6A5571241A15C8B600C46014 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6A5570F11A15C7ED00C46014 /* HexMeister */;
-			targetProxy = 6A55710C1A15C7ED00C46014 /* PBXContainerItemProxy */;
+			name = TSAppKit;
+			targetProxy = 6A5571231A15C8B600C46014 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -250,6 +320,7 @@
 				6A5571001A15C7ED00C46014 /* Base */,
 			);
 			name = SQUDocument.xib;
+			path = HexMeister;
 			sourceTree = "<group>";
 		};
 		6A5571041A15C7ED00C46014 /* MainMenu.xib */ = {
@@ -341,9 +412,11 @@
 		};
 		6A5571161A15C7ED00C46014 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CE49B4213CEC972DF88700E /* Pods-HexMeister.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = "HexMeister/HexMeister-Prefix.pch";
 				INFOPLIST_FILE = HexMeister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,48 +425,14 @@
 		};
 		6A5571171A15C7ED00C46014 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C94337398F727D027D9EA08F /* Pods-HexMeister.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = "HexMeister/HexMeister-Prefix.pch";
 				INFOPLIST_FILE = HexMeister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		6A5571191A15C7ED00C46014 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HexMeisterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HexMeister.app/Contents/MacOS/HexMeister";
-			};
-			name = Debug;
-		};
-		6A55711A1A15C7ED00C46014 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HexMeisterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HexMeister.app/Contents/MacOS/HexMeister";
 			};
 			name = Release;
 		};
@@ -416,14 +455,7 @@
 				6A5571171A15C7ED00C46014 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		6A5571181A15C7ED00C46014 /* Build configuration list for PBXNativeTarget "HexMeisterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6A5571191A15C7ED00C46014 /* Debug */,
-				6A55711A1A15C7ED00C46014 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
