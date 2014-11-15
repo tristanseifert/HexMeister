@@ -6,9 +6,26 @@
 //  Copyright (c) 2014 Tristan Seifert. All rights reserved.
 //
 
+#import <CoreText/CoreText.h>
+
 #import "TSHexView.h"
 
+@interface TSHexView ()
+
+- (void) drawRow:(NSUInteger) row;
+
+@end
+
 @implementation TSHexView
+
+#pragma mark - Initialisation
+- (id) initWithCoder:(NSCoder *) coder {
+	if(self = [super initWithCoder:coder]) {
+		_rowHeight = 16.f;
+	}
+	
+	return self;
+}
 
 #pragma mark - Drawing
 /**
@@ -16,9 +33,40 @@
  */
 - (void) drawRect:(NSRect) dirtyRect {
     [super drawRect:dirtyRect];
+
+	// get graphics contest
+	NSGraphicsContext *context = [NSGraphicsContext currentContext];
 	
-	[[NSColor redColor] set];
+	// clear dirty rect
+	[[NSColor controlBackgroundColor] set];
 	NSRectFill(dirtyRect);
+	
+	// figure out the starting row
+	NSUInteger startRow = dirtyRect.origin.y / _rowHeight;
+	
+	NSUInteger numRows = dirtyRect.size.height / _rowHeight;
+	numRows += (((int) dirtyRect.size.height) % ((int) _rowHeight)) ? 1 : 0;
+	
+	DDLogVerbose(@"drawing %lu rows at row %lu", numRows, startRow);
+	
+	// draw rows
+	for (NSUInteger row = startRow; row < numRows; row++) {
+		[self drawRow:row];
+	}
+}
+
+/**
+ * Draws a specific row of data.
+ */
+- (void) drawRow:(NSUInteger) row {
+	// clear the row's background
+	CGFloat width = self.bounds.size.width;
+	NSRect rect = NSMakeRect(0, row * _rowHeight, width, _rowHeight);
+	
+	CGFloat hue = ((CGFloat) row) / 100.f;
+	[[NSColor colorWithHue:hue saturation:1.0 brightness:1.0 alpha:1.0] set];
+	
+	NSRectFill(rect);
 }
 
 /**
@@ -134,7 +182,7 @@
 - (NSSize) intrinsicContentSize {
 	NSSize scrollViewSize = self.enclosingScrollView.bounds.size;
 	
-	scrollViewSize.height = 1337;
+	scrollViewSize.height = 16 * (256);
 	
 	return scrollViewSize;
 }

@@ -305,9 +305,9 @@
 			buildConfigurationList = 6A5571151A15C7ED00C46014 /* Build configuration list for PBXNativeTarget "HexMeister" */;
 			buildPhases = (
 				A3F09D5A23A494D09EB23681 /* Check Pods Manifest.lock */,
-				6A5570EE1A15C7ED00C46014 /* Sources */,
 				6A5570EF1A15C7ED00C46014 /* Frameworks */,
 				6AFA531E1A15D37E008888C4 /* Increment Bundle Version */,
+				6A5570EE1A15C7ED00C46014 /* Sources */,
 				6A5571251A15C8B800C46014 /* Copy Frameworks */,
 				6A5570F01A15C7ED00C46014 /* Resources */,
 				6AFA53201A15D414008888C4 /* Copy PlugIns */,
@@ -419,7 +419,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		6AFA531E1A15D37E008888C4 /* Increment Bundle Version */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -427,7 +427,7 @@
 			name = "Increment Bundle Version";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
 		};
@@ -682,6 +682,7 @@
 				6AFA532F1A168CDE008888C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

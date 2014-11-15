@@ -12,6 +12,8 @@
 	
 }
 
+@property (nonatomic, readonly) CGFloat rowHeight;
+
 @property (nonatomic, readonly) NSUInteger byteGrouping;
 @property (nonatomic, readonly) BOOL overwriteMode;
 
