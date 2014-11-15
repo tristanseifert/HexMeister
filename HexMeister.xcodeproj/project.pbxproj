@@ -18,6 +18,11 @@
 		6A55712D1A15CC3E00C46014 /* TSPreferencesPanels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A55712C1A15CC3E00C46014 /* TSPreferencesPanels.plist */; };
 		6A5571311A15CCC200C46014 /* TSPreferencesGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A55712F1A15CCC200C46014 /* TSPreferencesGeneral.m */; };
 		6A5571321A15CCC200C46014 /* TSPreferencesGeneral.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A5571301A15CCC200C46014 /* TSPreferencesGeneral.xib */; };
+		6A5571341A15CF5200C46014 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5571331A15CF5200C46014 /* QuartzCore.framework */; };
+		6A5571381A15D2E300C46014 /* TSPlugInManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5571371A15D2E300C46014 /* TSPlugInManager.m */; };
+		6AFA53241A16421D008888C4 /* TSPathHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA53231A16421D008888C4 /* TSPathHelper.m */; };
+		6AFA53321A168D11008888C4 /* Integers.bundle in Copy PlugIns */ = {isa = PBXBuildFile; fileRef = 6AFA53291A168CDE008888C4 /* Integers.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6AFA53351A168D35008888C4 /* TSIntegerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA53341A168D35008888C4 /* TSIntegerPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,13 @@
 			remoteGlobalIDString = 6ABE16121A11A7AE00165B3A;
 			remoteInfo = TSAppKit;
 		};
+		6AFA53301A168D09008888C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A5570EA1A15C7ED00C46014 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AFA53281A168CDE008888C4;
+			remoteInfo = Integers;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +59,17 @@
 				6A5571261A15C8EF00C46014 /* TSAppKit.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AFA53201A15D414008888C4 /* Copy PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6AFA53321A168D11008888C4 /* Integers.bundle in Copy PlugIns */,
+			);
+			name = "Copy PlugIns";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -68,6 +91,16 @@
 		6A55712E1A15CCC200C46014 /* TSPreferencesGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPreferencesGeneral.h; sourceTree = "<group>"; };
 		6A55712F1A15CCC200C46014 /* TSPreferencesGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPreferencesGeneral.m; sourceTree = "<group>"; };
 		6A5571301A15CCC200C46014 /* TSPreferencesGeneral.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSPreferencesGeneral.xib; sourceTree = "<group>"; };
+		6A5571331A15CF5200C46014 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6A5571361A15D2E300C46014 /* TSPlugInManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSPlugInManager.h; path = HexMeister/TSPlugInManager.h; sourceTree = "<group>"; };
+		6A5571371A15D2E300C46014 /* TSPlugInManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSPlugInManager.m; path = HexMeister/TSPlugInManager.m; sourceTree = "<group>"; };
+		6AFA53221A16421D008888C4 /* TSPathHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPathHelper.h; sourceTree = "<group>"; };
+		6AFA53231A16421D008888C4 /* TSPathHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPathHelper.m; sourceTree = "<group>"; };
+		6AFA53291A168CDE008888C4 /* Integers.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Integers.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AFA532C1A168CDE008888C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AFA53331A168D35008888C4 /* TSIntegerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSIntegerPlugin.h; sourceTree = "<group>"; };
+		6AFA53341A168D35008888C4 /* TSIntegerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSIntegerPlugin.m; sourceTree = "<group>"; };
+		6AFA53361A168EEE008888C4 /* TSPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSPlugIn.h; path = HexMeister/TSPlugIn.h; sourceTree = "<group>"; };
 		7CE49B4213CEC972DF88700E /* Pods-HexMeister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexMeister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HexMeister/Pods-HexMeister.debug.xcconfig"; sourceTree = "<group>"; };
 		C94337398F727D027D9EA08F /* Pods-HexMeister.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexMeister.release.xcconfig"; path = "Pods/Target Support Files/Pods-HexMeister/Pods-HexMeister.release.xcconfig"; sourceTree = "<group>"; };
 		F77F51F6E02915A834FD1735 /* libPods-HexMeister.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HexMeister.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +111,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A5571341A15CF5200C46014 /* QuartzCore.framework in Frameworks */,
 				5BD0B4195E05C956B764B2C5 /* libPods-HexMeister.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AFA53261A168CDE008888C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +129,7 @@
 		14E48A187B11312FE6B710F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6A5571331A15CF5200C46014 /* QuartzCore.framework */,
 				F77F51F6E02915A834FD1735 /* libPods-HexMeister.a */,
 			);
 			name = Frameworks;
@@ -107,6 +149,9 @@
 			children = (
 				6A55711B1A15C89F00C46014 /* TSAppKit.xcodeproj */,
 				6A5571271A15C93300C46014 /* Document */,
+				6A5571351A15D22700C46014 /* PlugIn API */,
+				6AFA531F1A15D404008888C4 /* Default PlugIns */,
+				6AFA53211A164208008888C4 /* Helpers */,
 				6A55712B1A15CA3D00C46014 /* Preferences */,
 				6A5570F41A15C7ED00C46014 /* App Delegate */,
 				6A5571281A15C97F00C46014 /* Resources */,
@@ -120,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				6A5570F21A15C7ED00C46014 /* HexMeister.app */,
+				6AFA53291A168CDE008888C4 /* Integers.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,6 +231,52 @@
 			path = HexMeister;
 			sourceTree = "<group>";
 		};
+		6A5571351A15D22700C46014 /* PlugIn API */ = {
+			isa = PBXGroup;
+			children = (
+				6A5571361A15D2E300C46014 /* TSPlugInManager.h */,
+				6A5571371A15D2E300C46014 /* TSPlugInManager.m */,
+				6AFA53361A168EEE008888C4 /* TSPlugIn.h */,
+			);
+			name = "PlugIn API";
+			sourceTree = "<group>";
+		};
+		6AFA531F1A15D404008888C4 /* Default PlugIns */ = {
+			isa = PBXGroup;
+			children = (
+				6AFA532A1A168CDE008888C4 /* Integers */,
+			);
+			name = "Default PlugIns";
+			sourceTree = "<group>";
+		};
+		6AFA53211A164208008888C4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6AFA53221A16421D008888C4 /* TSPathHelper.h */,
+				6AFA53231A16421D008888C4 /* TSPathHelper.m */,
+			);
+			name = Helpers;
+			path = HexMeister;
+			sourceTree = "<group>";
+		};
+		6AFA532A1A168CDE008888C4 /* Integers */ = {
+			isa = PBXGroup;
+			children = (
+				6AFA53331A168D35008888C4 /* TSIntegerPlugin.h */,
+				6AFA53341A168D35008888C4 /* TSIntegerPlugin.m */,
+				6AFA532B1A168CDE008888C4 /* Supporting Files */,
+			);
+			path = Integers;
+			sourceTree = "<group>";
+		};
+		6AFA532B1A168CDE008888C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AFA532C1A168CDE008888C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,19 +287,39 @@
 				A3F09D5A23A494D09EB23681 /* Check Pods Manifest.lock */,
 				6A5570EE1A15C7ED00C46014 /* Sources */,
 				6A5570EF1A15C7ED00C46014 /* Frameworks */,
+				6AFA531E1A15D37E008888C4 /* Increment Bundle Version */,
 				6A5571251A15C8B800C46014 /* Copy Frameworks */,
 				6A5570F01A15C7ED00C46014 /* Resources */,
+				6AFA53201A15D414008888C4 /* Copy PlugIns */,
 				F9E7F4FB058705225108A8FE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6AFA53311A168D09008888C4 /* PBXTargetDependency */,
 				6A5571241A15C8B600C46014 /* PBXTargetDependency */,
 			);
 			name = HexMeister;
 			productName = HexMeister;
 			productReference = 6A5570F21A15C7ED00C46014 /* HexMeister.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6AFA53281A168CDE008888C4 /* Integers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AFA532D1A168CDE008888C4 /* Build configuration list for PBXNativeTarget "Integers" */;
+			buildPhases = (
+				6AFA53251A168CDE008888C4 /* Sources */,
+				6AFA53261A168CDE008888C4 /* Frameworks */,
+				6AFA53271A168CDE008888C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Integers;
+			productName = Integers;
+			productReference = 6AFA53291A168CDE008888C4 /* Integers.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -219,6 +331,9 @@
 				ORGANIZATIONNAME = "Tristan Seifert";
 				TargetAttributes = {
 					6A5570F11A15C7ED00C46014 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					6AFA53281A168CDE008888C4 = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
@@ -243,6 +358,7 @@
 			projectRoot = "";
 			targets = (
 				6A5570F11A15C7ED00C46014 /* HexMeister */,
+				6AFA53281A168CDE008888C4 /* Integers */,
 			);
 		};
 /* End PBXProject section */
@@ -270,9 +386,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6AFA53271A168CDE008888C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6AFA531E1A15D37E008888C4 /* Increment Bundle Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Bundle Version";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
 		A3F09D5A23A494D09EB23681 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -311,9 +448,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A5571311A15CCC200C46014 /* TSPreferencesGeneral.m in Sources */,
+				6AFA53241A16421D008888C4 /* TSPathHelper.m in Sources */,
+				6A5571381A15D2E300C46014 /* TSPlugInManager.m in Sources */,
 				6A5570FE1A15C7ED00C46014 /* TSDocument.m in Sources */,
 				6A5570FB1A15C7ED00C46014 /* main.m in Sources */,
 				6A5570F91A15C7ED00C46014 /* TSAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AFA53251A168CDE008888C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AFA53351A168D35008888C4 /* TSIntegerPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +471,11 @@
 			isa = PBXTargetDependency;
 			name = TSAppKit;
 			targetProxy = 6A5571231A15C8B600C46014 /* PBXContainerItemProxy */;
+		};
+		6AFA53311A168D09008888C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AFA53281A168CDE008888C4 /* Integers */;
+			targetProxy = 6AFA53301A168D09008888C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -450,6 +602,36 @@
 			};
 			name = Release;
 		};
+		6AFA532E1A168CDE008888C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HexMeister.app/Contents/MacOS/HexMeister";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Integers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		6AFA532F1A168CDE008888C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HexMeister.app/Contents/MacOS/HexMeister";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Integers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -470,6 +652,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6AFA532D1A168CDE008888C4 /* Build configuration list for PBXNativeTarget "Integers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AFA532E1A168CDE008888C4 /* Debug */,
+				6AFA532F1A168CDE008888C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

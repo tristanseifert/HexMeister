@@ -8,6 +8,7 @@
 
 #import <TSAppKit/TSAppKit.h>
 
+#import "TSPlugInManager.h"
 #import "TSAppDelegate.h"
 
 @interface TSAppDelegate ()
@@ -17,7 +18,7 @@
 @implementation TSAppDelegate
 
 - (void) applicationDidFinishLaunching:(NSNotification *) aNotification {
-	// Insert code here to initialize your application
+	[[TSPlugInManager sharedInstance] loadPlugins];
 }
 
 - (void) applicationWillTerminate:(NSNotification *) aNotification {
