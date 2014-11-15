@@ -23,6 +23,9 @@
 		6AFA53241A16421D008888C4 /* TSPathHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA53231A16421D008888C4 /* TSPathHelper.m */; };
 		6AFA53321A168D11008888C4 /* Integers.bundle in Copy PlugIns */ = {isa = PBXBuildFile; fileRef = 6AFA53291A168CDE008888C4 /* Integers.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6AFA53351A168D35008888C4 /* TSIntegerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA53341A168D35008888C4 /* TSIntegerPlugin.m */; };
+		6AFA533A1A16F3C1008888C4 /* TSHexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA53391A16F3C1008888C4 /* TSHexView.m */; };
+		6AFA533C1A16F66D008888C4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFA533B1A16F66D008888C4 /* CoreText.framework */; };
+		6AFA533E1A16FC2A008888C4 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AFA533D1A16FC2A008888C4 /* DefaultPreferences.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,10 @@
 		6AFA53331A168D35008888C4 /* TSIntegerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSIntegerPlugin.h; sourceTree = "<group>"; };
 		6AFA53341A168D35008888C4 /* TSIntegerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSIntegerPlugin.m; sourceTree = "<group>"; };
 		6AFA53361A168EEE008888C4 /* TSPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSPlugIn.h; path = HexMeister/TSPlugIn.h; sourceTree = "<group>"; };
+		6AFA53381A16F3C1008888C4 /* TSHexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSHexView.h; path = HexMeister/TSHexView.h; sourceTree = "<group>"; };
+		6AFA53391A16F3C1008888C4 /* TSHexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSHexView.m; path = HexMeister/TSHexView.m; sourceTree = "<group>"; };
+		6AFA533B1A16F66D008888C4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		6AFA533D1A16FC2A008888C4 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
 		7CE49B4213CEC972DF88700E /* Pods-HexMeister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexMeister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HexMeister/Pods-HexMeister.debug.xcconfig"; sourceTree = "<group>"; };
 		C94337398F727D027D9EA08F /* Pods-HexMeister.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexMeister.release.xcconfig"; path = "Pods/Target Support Files/Pods-HexMeister/Pods-HexMeister.release.xcconfig"; sourceTree = "<group>"; };
 		F77F51F6E02915A834FD1735 /* libPods-HexMeister.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HexMeister.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AFA533C1A16F66D008888C4 /* CoreText.framework in Frameworks */,
 				6A5571341A15CF5200C46014 /* QuartzCore.framework in Frameworks */,
 				5BD0B4195E05C956B764B2C5 /* libPods-HexMeister.a in Frameworks */,
 			);
@@ -129,6 +137,7 @@
 		14E48A187B11312FE6B710F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6AFA533B1A16F66D008888C4 /* CoreText.framework */,
 				6A5571331A15CF5200C46014 /* QuartzCore.framework */,
 				F77F51F6E02915A834FD1735 /* libPods-HexMeister.a */,
 			);
@@ -148,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				6A55711B1A15C89F00C46014 /* TSAppKit.xcodeproj */,
+				6AFA53371A16F36E008888C4 /* hex view */,
 				6A5571271A15C93300C46014 /* Document */,
 				6A5571351A15D22700C46014 /* PlugIn API */,
 				6AFA531F1A15D404008888C4 /* Default PlugIns */,
@@ -176,6 +186,7 @@
 				6A5570F71A15C7ED00C46014 /* TSAppDelegate.h */,
 				6A5570F81A15C7ED00C46014 /* TSAppDelegate.m */,
 				6A5571041A15C7ED00C46014 /* MainMenu.xib */,
+				6AFA533D1A16FC2A008888C4 /* DefaultPreferences.plist */,
 				6A5570F51A15C7ED00C46014 /* Supporting Files */,
 			);
 			name = "App Delegate";
@@ -275,6 +286,15 @@
 				6AFA532C1A168CDE008888C4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6AFA53371A16F36E008888C4 /* hex view */ = {
+			isa = PBXGroup;
+			children = (
+				6AFA53381A16F3C1008888C4 /* TSHexView.h */,
+				6AFA53391A16F3C1008888C4 /* TSHexView.m */,
+			);
+			name = "hex view";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +403,7 @@
 				6A5571321A15CCC200C46014 /* TSPreferencesGeneral.xib in Resources */,
 				6A5571061A15C7ED00C46014 /* MainMenu.xib in Resources */,
 				6A55712D1A15CC3E00C46014 /* TSPreferencesPanels.plist in Resources */,
+				6AFA533E1A16FC2A008888C4 /* DefaultPreferences.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +474,7 @@
 				6A5570FE1A15C7ED00C46014 /* TSDocument.m in Sources */,
 				6A5570FB1A15C7ED00C46014 /* main.m in Sources */,
 				6A5570F91A15C7ED00C46014 /* TSAppDelegate.m in Sources */,
+				6AFA533A1A16F3C1008888C4 /* TSHexView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

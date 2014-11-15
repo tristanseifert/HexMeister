@@ -17,12 +17,29 @@
 
 @implementation TSAppDelegate
 
+/**
+ * Initialises some application state (plugins, default preferences, etc) once
+ * the application has finished launching. This is called before document
+ * windows are restored.
+ */
 - (void) applicationDidFinishLaunching:(NSNotification *) aNotification {
+	// Register defaults
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"DefaultPreferences"
+													 ofType:@"plist"];
+	NSDictionary *prefs = [NSDictionary dictionaryWithContentsOfFile:path];
+	DDAssert(prefs, @"Couldn't load preferences defaults");
+	
+	[[NSUserDefaults standardUserDefaults] registerDefaults:prefs];
+	
+	// Load plugins
 	[[TSPlugInManager sharedInstance] loadPlugins];
 }
 
+/**
+ * Tears down any allocated mechanisms, such as plugins.
+ */
 - (void) applicationWillTerminate:(NSNotification *) aNotification {
-	// Insert code here to tear down your application
+
 }
 
 /**

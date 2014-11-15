@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Tristan Seifert. All rights reserved.
 //
 
+#import "TSHexView.h"
+
 #import "TSDocument.h"
 
 @interface TSDocument ()
@@ -14,42 +16,135 @@
 
 @implementation TSDocument
 
+/**
+ * Initialises a "new" document.
+ */
 - (instancetype) init {
     self = [super init];
     if (self) {
-		// Add your subclass-specific initialization here.
+		// create dummy data for new documents
+		_data = [NSMutableData dataWithCapacity:1024];
     }
     return self;
 }
 
-- (void)windowControllerDidLoadNib:(NSWindowController *) aController {
+/**
+ * Initialises the UI after being loaded.
+ */
+- (void) windowControllerDidLoadNib:(NSWindowController *) aController {
 	[super windowControllerDidLoadNib:aController];
-	// Add any code here that needs to be executed once the windowController has loaded the document's window.
+	
+	// update the editor view's data
+	DDAssert(_data, @"Document must have data");
+	_hexView.data = _data;
 }
 
+/**
+ * Required to support Versions.
+ */
 + (BOOL) autosavesInPlace {
 	return YES;
 }
 
+/**
+ * Rely on NSDocument to load our NSWindowController, using the specified NIB.
+ */
 - (NSString *) windowNibName {
-	// Override returning the nib file name of the document
-	// If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
 	return @"TSDocument";
 }
 
-- (NSData *) dataOfType:(NSString *) typeName error:(NSError **) outError {
-	// Insert code here to write your document to data of the specified type. If outError != NULL, ensure that you create and set an appropriate error when returning nil.
-	// You can also choose to override -fileWrapperOfType:error:, -writeToURL:ofType:error:, or -writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
+/**
+ * Writes out the data currently in the editor view back to the original file.
+ */
+- (BOOL) writeToURL:(NSURL *) url ofType:(NSString *) typeName
+			  error:(NSError *__autoreleasing *) outError {
 	[NSException raise:@"UnimplementedMethod" format:@"%@ is unimplemented", NSStringFromSelector(_cmd)];
-	return nil;
+	
+	return YES;
 }
 
-- (BOOL) readFromData:(NSData *) data ofType:(NSString *) typeName error:(NSError **) outError {
-	// Insert code here to read your document from the given data of the specified type. If outError != NULL, ensure that you create and set an appropriate error when returning NO.
-	// You can also choose to override -readFromFileWrapper:ofType:error: or -readFromURL:ofType:error: instead.
-	// If you override either of these, you should also override -isEntireFileLoaded to return NO if the contents are lazily loaded.
-	[NSException raise:@"UnimplementedMethod" format:@"%@ is unimplemented", NSStringFromSelector(_cmd)];
+/**
+ * Reads the contents of the specified file into the editor view.
+ *
+ * @note Maps the file in memory, if it is over a certain (configurable) size,
+ * for performance reasons.
+ */
+- (BOOL) readFromURL:(NSURL *) url ofType:(NSString *) typeName
+			   error:(NSError *__autoreleasing *) outError {
+	NSError *err = nil;
+	
+	// Convert URL to fs path
+	NSString *path = url.path;
+	path = [path stringByResolvingSymlinksInPath];
+	
+	// Get the filesize
+	NSFileManager *fm = [NSFileManager defaultManager];
+	NSDictionary *attr = [fm attributesOfItemAtPath:path error:&err];
+	unsigned long long size;
+	
+	if(!err) {
+		size = attr.fileSize;
+	} else {
+		if(outError) *outError = err;
+		return NO;
+	}
+	
+	// Load either as a memory-mapped file, or read it all to memory now.
+	NSUInteger sizeThreshold = [[NSUserDefaults standardUserDefaults] integerForKey:@"minMappedFileSize"];
+	
+	if(size > sizeThreshold) {
+		_data = [NSMutableData dataWithContentsOfURL:url
+											 options:NSDataReadingMappedIfSafe
+											   error:&err];
+		
+		if(err) {
+			if(outError) *outError = err;
+			return NO;
+		}
+	} else {
+		_data = [NSMutableData dataWithContentsOfURL:url options:0
+											   error:&err];
+		
+		if(err) {
+			if(outError) *outError = err;
+			return NO;
+		}
+	}
+	
 	return YES;
+}
+
+#pragma mark - Menu Validation
+/**
+ * Validates a menu item's action, and updates its state, if required.
+ */
+- (BOOL) validateMenuItem:(NSMenuItem *) item {	
+	if(item.action == @selector(ui_jumpTo:)) {
+		return YES;
+	}
+	
+	return NO;
+}
+
+#pragma mark - Menu Actions
+/**
+ * Opens the "Jump To…" sheet.
+ */
+- (IBAction) ui_jumpTo:(id) sender {
+	
+}
+
+#pragma mark - Split View Delegate
+- (CGFloat) splitView:(NSSplitView *) splitView
+constrainSplitPosition:(CGFloat) proposedPosition
+		  ofSubviewAt:(NSInteger) dividerIndex {
+	if(proposedPosition < 50.f) {
+		return 50.f;
+	} else if(proposedPosition > (splitView.frame.size.height - 50.f)) {
+		return (splitView.frame.size.height - 50.f);
+	} else {
+		return proposedPosition;
+	}
 }
 
 @end

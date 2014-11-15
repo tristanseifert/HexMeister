@@ -8,8 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface TSDocument : NSDocument
+@class TSHexView;
+@interface TSDocument : NSDocument <NSSplitViewDelegate> {
+	IBOutlet TSHexView *_hexView;
+}
 
+@property (nonatomic, readonly) NSMutableData *data;
+
+- (IBAction) ui_jumpTo:(id) sender;
 
 @end
 
