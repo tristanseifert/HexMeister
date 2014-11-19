@@ -13,6 +13,8 @@
 #import "TSPathHelper.h"
 #import "TSPlugIn.h"
 
+#import "TSDataType.h"
+
 #import "TSPlugInManager.h"
 
 static TSPlugInManager *sharedInstance = nil;
@@ -116,5 +118,7 @@ static TSPlugInManager *sharedInstance = nil;
 	_plugInBundles = pluginInstanes;
 	[self didChangeValueForKey:@"plugins"];
 }
+
+#pragma mark - Plugin Callables
 
 @end

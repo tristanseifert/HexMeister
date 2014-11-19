@@ -78,6 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A093DE11A1C276500D88F56 /* TSDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSDataType.h; path = HexMeister/TSDataType.h; sourceTree = "<group>"; };
 		6A5570F21A15C7ED00C46014 /* HexMeister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexMeister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5570F61A15C7ED00C46014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A5570F71A15C7ED00C46014 /* TSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSAppDelegate.h; sourceTree = "<group>"; };
@@ -248,6 +249,7 @@
 				6A5571361A15D2E300C46014 /* TSPlugInManager.h */,
 				6A5571371A15D2E300C46014 /* TSPlugInManager.m */,
 				6AFA53361A168EEE008888C4 /* TSPlugIn.h */,
+				6A093DE11A1C276500D88F56 /* TSDataType.h */,
 			);
 			name = "PlugIn API";
 			sourceTree = "<group>";
